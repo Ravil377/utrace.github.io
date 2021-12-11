@@ -1651,7 +1651,7 @@ body {
 .css-awscog-FormWrap {
     color: #fff;
 }
-.css-awscog-FormWrap input, .css-awscog-FormWrap textarea {
+.forma__input, .css-awscog-FormWrap textarea {
     font-family: Montserrat,sans-serif;
     box-sizing: border-box;
     display: block;
@@ -1700,43 +1700,7 @@ body {
     -ms-flex-align: center;
     align-items: center;
 }
-.css-1pru3ay-Box {
-    box-sizing: border-box;
-    -webkit-flex: 0 0 30px;
-    -ms-flex: 0 0 30px;
-    flex: 0 0 30px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    position: relative;
-    margin-right: 1em;
-    cursor: pointer;
-    border: 1px solid transparent;
-    border-radius: 2px;
-    -webkit-transition: -webkit-transform 0.125s ease-out;
-    transition: transform 0.125s ease-out;
-}
-.css-1pru3ay-Box:after {
-    content: '';
-    position: absolute;
-    -webkit-transition: background-color 0.25s ease-out,-webkit-transform 0.125s linear;
-    transition: background-color 0.25s ease-out,transform 0.125s linear;
-    background-color: #F6584B;
-    width: 16px;
-    height: 16px;
-    -webkit-transform: scale(1) rotate(
-180deg);
-    -moz-transform: scale(1) rotate(180deg);
-    -ms-transform: scale(1) rotate(180deg);
-    transform: scale(1) rotate(
-180deg);
-    left: 6px;
-    top: 6px;
-}
+
 .css-5lfbyo-Text {
     -webkit-flex: 1;
     -ms-flex: 1;
@@ -5069,3 +5033,127 @@ strong{
     line-height: 1.33;
     text-align: center;
 }
+
+.forma__button_inactive {
+    opacity: .3;
+}
+
+/* .forma__checkbox {
+    display: none;
+} */
+
+
+
+
+/* = стилизуем текст */
+/* .forma__label {
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+} */
+
+/* = скрываем input */
+.forma__checkbox {
+    visibility: hidden;
+}
+
+/* = стилизуем кнопку, которая работает вместе с input */
+
+.css-1pru3ay-Box {
+    box-sizing: border-box;
+    -webkit-flex: 0 0 30px;
+    -ms-flex: 0 0 30px;
+    flex: 0 0 30px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    position: relative;
+    margin-right: 1em;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    -webkit-transition: -webkit-transform 0.125s ease-out;
+    transition: transform 0.125s ease-out;
+}
+
+.css-1pru3ay-Box:after {
+    content: '';
+    position: absolute;
+    -webkit-transition: background-color 0.25s ease-out,-webkit-transform 0.125s linear;
+    transition: background-color 0.25s ease-out,transform 0.125s linear;
+    background-color: #F6584B;
+    opacity: 0;
+    width: 16px;
+    height: 16px;
+    -webkit-transform: scale(1) rotate(180deg);
+    -moz-transform: scale(1) rotate(180deg);
+    -ms-transform: scale(1) rotate(180deg);
+    transform: scale(1) rotate(180deg);
+    left: 6px;
+    top: 6px;
+}
+
+.forma__checkbox:checked + .css-1pru3ay-Box:after {
+    opacity: 1;
+}
+
+/* = стилизуем текст */
+.forma__label {
+    display: flex;
+}
+.forma__checkbox {
+    display: none;
+}
+
+
+
+.css-1qwgrea-OverlayElement {
+    display: none;
+    touch-action: none;
+    z-index: 101;
+    position: fixed;
+    inset: 0px;
+    background-color: rgba(55, 57, 98, 0.706);
+    backdrop-filter: blur(10px);
+    transition: all 0.5s linear 0s;
+    pointer-events: all;
+    padding: 10vh 10vw;
+}
+
+.css-1qwgrea-OverlayElement_active {
+    display: block;
+}
+
+.css-whjsps-Success {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.css-1qwgrea-OverlayElement .inner {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.css-whjsps-Success p {
+    line-height: 1.5;
+    margin: 2rem 0px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-shadow: rgb(0 0 0 / 47%) 1px 2px 5px;
+}
+
+@media (max-width: 1920px) {
+    .css-whjsps-Success p {
+        font-size: clamp(24px, 2.08333vw, 40px);
+    }
+}
+
