@@ -163,6 +163,18 @@ textarea {
     transform: rotate(
 0deg);
 }
+.js-burger_active .css-4itxwp-Bar {
+    height: 0;
+}
+.js-burger_active .css-4itxwp-Bar:after {
+    top: 0%;
+    transform: rotate(-405deg);
+}
+.js-burger_active .css-4itxwp-Bar:before {
+    top: 0%;
+    transform: rotate(405deg);
+}
+
 .css-asxo1v-HamburgerWrap {
     position: fixed;
     right: 3.33vw;
@@ -2176,7 +2188,8 @@ body {
 .slidermobtop{
     position: absolute;
     left: 0;
-    bottom: calc(100% - 16px);
+    top: -16px;
+    /* bottom: calc(100% - 16px); */
     background-color: #F6584B;
     display: grid;
     place-content: center;
@@ -4873,8 +4886,8 @@ strong{
 
 .burger-menu {
     position: fixed;
+    width: 100vw;
     z-index: 110;
-    width: max(400px, 36vmax);
     top: 0px;
     right: 0px;
     bottom: 0px;
@@ -4885,6 +4898,20 @@ strong{
     display: grid;
     grid-template-rows: 2.2fr 1fr 1fr 0.5fr;
 }
+
+@media (min-width: 768px){
+    .burger-menu {
+        width: max(400px, 36vmax);
+    }
+}
+@media (min-width: 768px){
+    .css-15di9lf-OverlayElement {
+        top: 0;
+    }
+}
+
+
+
 
 .burger-menu_active {
     transform: translateX(0);
@@ -4910,10 +4937,19 @@ strong{
     line-height: 1.875;
     margin-bottom: 2.5em;
     text-decoration: none;
-    color: white;
     line-height: 1.06977;
     font-size: 3.98148vh;
     font-weight: bold;
+}
+
+.burger-menu__item a {
+    text-decoration: none;
+    color: white;
+}
+
+.burger-menu__item a:hover {
+    text-decoration: none;
+    color: white;
 }
 
 
@@ -4961,7 +4997,7 @@ strong{
     position: fixed;
     left: 0;
     right: 0;
-    top: 0;
+    top: 60px;
     bottom: 0;
     background-color: transparent;
     -webkit-backdrop-filter: blur(0px);
@@ -4975,4 +5011,61 @@ strong{
 .burger-overlay_active.css-15di9lf-OverlayElement  {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+}
+
+.swiper-pagination__project .swiper-pagination-bullet,
+.swiper-pagination__partners .swiper-pagination-bullet {
+    -webkit-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+    width: clamp(10px, 1vw, 21px);
+    height: clamp(10px, 1vw, 21px);
+    border: 2px solid #f6f6f6;
+    background-color: #F6584B;
+    margin: 0 min(0.25rem, 0.25vw);
+    border-radius: 0;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.swiper-pagination__project .swiper-pagination-bullet-active,
+.swiper-pagination__partners .swiper-pagination-bullet-active {
+    background-color: #373962;
+    border: 3px solid #373962;
+}
+
+.slidermobile-wrapper__solution {
+    max-width: 350px;
+    width: 100%;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+@media (min-width: 1281px){
+    .slidermobile-wrapper__solution {
+        display: none;
+    }
+}
+
+.solution__wrapper {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    padding-top: 16px;
+}
+
+.solution__card {
+    touch-action: none;
+    position: relative;
+    background-color: #373962;
+    width: 100%;
+    min-height: 120px;
+    padding: 0.66em 1.11em;
+}
+
+.solution__card p {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.33;
+    text-align: center;
 }
