@@ -124,6 +124,7 @@ const buttonOk = document.querySelector('.js-button__ok');
 let timeoutID;
 
 const closeThanksPopup = () => {
+    forma.reset();
     thanksPopup.classList.remove('css-1qwgrea-OverlayElement_active');
     buttonOk.removeEventListener('click', closeThanksPopup);
     clearTimeout(timeoutID);
@@ -133,7 +134,7 @@ const sendForm = (e) => {
     e.preventDefault;
     thanksPopup.classList.add('css-1qwgrea-OverlayElement_active');
     buttonOk.addEventListener('click', closeThanksPopup);
-    timeoutID = setTimeout(closeThanksPoopup, 5000);
+    timeoutID = setTimeout(closeThanksPopup, 5000);
 }
 
 
