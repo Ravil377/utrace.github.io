@@ -9,7 +9,7 @@ const burgerMenuButton = document.querySelector('.burger-menu__button');
 const openBurgerMenu = (burgerButton) => {
     burgerMenu.classList.toggle("burger-menu_active");
     burgerButton.classList.toggle('js-burger_active');
-    linkBurger.classList.toggle('js-hamburger-wrap_active');
+    linkBurger && linkBurger.classList.toggle('js-hamburger-wrap_active');
     body.classList.toggle('no-scroll');
     burgerOverlay.classList.toggle("burger-overlay_active");
     document.addEventListener("click", (e) => checkPressOverlay(e, burgerButton));
@@ -25,7 +25,7 @@ const scrollToForm = (burgerButton) => {
 const burgerMenuClose = (burgerButton) => {
     burgerMenu.classList.remove("burger-menu_active");
     burgerButton.classList.remove('js-burger_active');
-    linkBurger.classList.remove('js-hamburger-wrap_active');
+    linkBurger && linkBurger.classList.remove('js-hamburger-wrap_active');
     body.classList.remove('no-scroll');
     burgerOverlay.classList.remove('burger-overlay_active');
     document.removeEventListener("keydown", (e) => checkKeyPress(e, burgerButton));
@@ -57,92 +57,120 @@ burgerMenuButton.addEventListener('click', () => {
 
 
 
+if(document.querySelector('.forma')) {
+    class FormValidator {
+        constructor(settings, form) {
+            this._settings = settings;
+            this._form = form;
+            this._inputList = Array.from(this._form.querySelectorAll(this._settings.inputSelector));
+            this._buttonElement = this._form.querySelector(this._settings.submitButtonSelector);
+        }
 
-class FormValidator {
-    constructor(settings, form) {
-        this._settings = settings;
-        this._form = form;
-        this._inputList = Array.from(this._form.querySelectorAll(this._settings.inputSelector));
-        this._buttonElement = this._form.querySelector(this._settings.submitButtonSelector);
-    }
-
-    enableValidation() {
-        this._disableSubmitButton();
-        this._form.addEventListener("submit", (evt) => {
-            evt.preventDefault();
-        });
-        this._setEventListener(this._form);
-    }
-
-    _setEventListener() {
-        this._inputList.forEach((inputElement) => {
-            inputElement.addEventListener("input", () => {
-                this._toggleButtonState();
+        enableValidation() {
+            this._disableSubmitButton();
+            this._form.addEventListener("submit", (evt) => {
+                evt.preventDefault();
             });
-        });
-        this._form.addEventListener("reset", () => {
+            this._setEventListener(this._form);
+        }
+
+        _setEventListener() {
+            this._inputList.forEach((inputElement) => {
+                inputElement.addEventListener("input", () => {
+                    this._toggleButtonState();
+                });
+            });
+            this._form.addEventListener("reset", () => {
+                this._disableSubmitButton();
+            });
+        }
+
+        _hasInvalidInput() {
+            return this._inputList.some((inputElement) => {
+                return !inputElement.validity.valid;
+            });
+        }
+
+        _toggleButtonState() {
             this._disableSubmitButton();
-        });
-    }
 
-    _hasInvalidInput() {
-        return this._inputList.some((inputElement) => {
-            return !inputElement.validity.valid;
-        });
-    }
+            if (this._hasInvalidInput(this._inputList)) {
+                this._disableSubmitButton();
+            } else {
+                this._buttonElement.removeAttribute("disabled");
+                this._buttonElement.classList.remove(this._settings.inactiveButtonClass);
+            }
+        }
 
-    _toggleButtonState() {
-        this._disableSubmitButton();
-
-        if (this._hasInvalidInput(this._inputList)) {
-            this._disableSubmitButton();
-        } else {
-            this._buttonElement.removeAttribute("disabled");
-            this._buttonElement.classList.remove(this._settings.inactiveButtonClass);
+        _disableSubmitButton() {
+            this._buttonElement.setAttribute("disabled", true);
+            this._buttonElement.classList.add(this._settings.inactiveButtonClass);
         }
     }
 
-    _disableSubmitButton() {
-        this._buttonElement.setAttribute("disabled", true);
-        this._buttonElement.classList.add(this._settings.inactiveButtonClass);
+    const forma = document.querySelector('.forma');
+    const validation = {
+        formSelector: ".forma",
+        inputSelector: ".forma__input",
+        submitButtonSelector: ".forma__button",
+        inactiveButtonClass: "forma__button_inactive",
+    };
+
+    const form = new FormValidator(validation, forma);
+    form.enableValidation();
+
+    const formaButton = document.querySelector('.forma__button');
+    const buttonOk = document.querySelector('.js-button__ok');
+    let timeoutID;
+
+    const closeThanksPopup = () => {
+        forma.reset();
+        thanksPopup.classList.remove('css-1qwgrea-OverlayElement_active');
+        buttonOk.removeEventListener('click', closeThanksPopup);
+        clearTimeout(timeoutID);
     }
+
+    const sendForm = (e) => {
+        e.preventDefault;
+        thanksPopup.classList.add('css-1qwgrea-OverlayElement_active');
+        buttonOk.addEventListener('click', closeThanksPopup);
+        timeoutID = setTimeout(closeThanksPopup, 5000);
+    }
+
+
+
+
+    formaButton.addEventListener('click', sendForm);
+
+    const thanksPopup = document.querySelector('.css-1qwgrea-OverlayElement');
 }
 
-const forma = document.querySelector('.forma');
-const validation = {
-    formSelector: ".forma",
-    inputSelector: ".forma__input",
-    submitButtonSelector: ".forma__button",
-    inactiveButtonClass: "forma__button_inactive",
-};
+if(document.querySelector('.years')) {
+    const News = document.querySelectorAll('.js-news');
+    const newsContainer = document.querySelector('.js-news-content');
+    News.forEach((newsItem, idx) => {
+        newsItem.querySelector('.news__tab').textContent = newsItem.id;
+    })
 
-const form = new FormValidator(validation, forma);
-form.enableValidation();
-
-const formaButton = document.querySelector('.forma__button');
-const buttonOk = document.querySelector('.js-button__ok');
-let timeoutID;
-
-const closeThanksPopup = () => {
-    forma.reset();
-    thanksPopup.classList.remove('css-1qwgrea-OverlayElement_active');
-    buttonOk.removeEventListener('click', closeThanksPopup);
-    clearTimeout(timeoutID);
+    const newsMobile = document.querySelector('.js-News-Mobile');
+    newsMobile && newsMobile.addEventListener('change', (e) => {
+        newsContainer.querySelectorAll('.date').forEach(item => {
+            item.parentElement.style.display = "block";
+            if(!item.textContent.includes(e.target.value)) {
+                item.parentElement.style.display = "none";
+            } 
+        })
+    })
+    
+    const newsMobileVideo = document.querySelector('.js-News-Mobile-video');
+    newsMobileVideo && newsMobileVideo.addEventListener('change', (e) => {
+        News.forEach(item => {
+            console.log(typeof item.id, typeof e.target.value);
+            if(!item.id.includes(e.target.value)) {
+                item.style.display = "none";
+            } else {
+                item.style.display = "grid";
+            }
+        })
+    });
 }
-
-const sendForm = (e) => {
-    e.preventDefault;
-    thanksPopup.classList.add('css-1qwgrea-OverlayElement_active');
-    buttonOk.addEventListener('click', closeThanksPopup);
-    timeoutID = setTimeout(closeThanksPopup, 5000);
-}
-
-
-
-
-formaButton.addEventListener('click', sendForm);
-
-const thanksPopup = document.querySelector('.css-1qwgrea-OverlayElement');
-
-
-
