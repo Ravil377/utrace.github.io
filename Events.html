@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Events</title>
+</head>
+
+<body>
+    <div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper">
+        <nav class="css-a6z381-Wrap ewxu9451">
+            <div class="css-1gwva9s-Container10-DesktopContainer ewxu9453"><a aria-label="Лого Utrace" href="/"
+                    style="color: white;"><svg width="44.64" height="59" viewBox="0 0 91.553 121">
+                        <path id="Path_2449" data-name="Path 2449"
+                            d="M-156.924,221.834V172.87l-13,4.578-.566.2-.565-.2-12.988-4.578v39.409l14.119,4.977Zm45.776-44.786L-123,172.87V254.1l11.853-4.183Zm11.836-6.662-10.132-3.491-10.14,3.574,10.128,3.57Zm-60.972.125-10.138-3.572-10.134,3.572,10.134,3.572Zm64.392,2.26-11.854,4.268v71.692l11.919-4.134Zm-45.771,59.249-38.957,13.78,10.762,3.779,15.263,5.384,12.932,4.522Zm-14.125-6.179-15.261-5.378-12.988-4.521V243.4l38.966-13.783Zm29.386.8-11.859,4.178v28.662L-126.4,255.3Zm10.965,57.707c-1.639,0-2.642-1.408-2.642-3.683,0-1.7.657-3.682,2.642-3.682a2.133,2.133,0,0,1,2.217,1.928h4.088a5.981,5.981,0,0,0-6.229-5.418,6.833,6.833,0,0,0-6.961,7.172c0,4.069,2.68,7.232,6.885,7.232,3.335,0,6.112-1.948,6.361-5.747h-4.144C-113.432,283.576-114.2,284.347-115.438,284.347Zm-62.03-2.1c0,1.427-.635,2.121-1.965,2.121-1.485,0-2.1-.694-2.1-2.121v-8.406h-4.2v8.349c0,3.644,1.947,5.63,6.229,5.63,3.951,0,6.247-1.524,6.247-5.862v-8.117h-4.2Zm75.859,1.832v-2h6.556v-3.182h-6.556v-1.716h7.232v-3.335h-11.377v13.728h11.568v-3.49Zm-31.659-10.238-5.07,13.728h4.261l.675-1.947h4.416l.674,1.947h4.263l-5.053-13.728Zm.771,8.831c.464-1.39.752-2.333.752-2.333.27-.85.347-1.157.579-2.1a18.744,18.744,0,0,0,.52,2.082s.482,1.562.734,2.353Zm-9.2,1.965c-.116-1.214-.617-3.046-2-3.393a3.62,3.62,0,0,0,2.023-3.355c0-3.182-2.756-4.049-4.9-4.049h-7.385v13.728h4.166v-4.841h1.774c1.965,0,2.217,1.2,2.333,2.778l.059.771a4.152,4.152,0,0,0,.249,1.292h4.166a3.219,3.219,0,0,1-.347-1.486Zm-5.784-4.8h-2.314v-2.815h2.082c1.292,0,1.948.464,1.948,1.388C-145.76,279.487-146.512,279.834-147.477,279.834Zm-22.341-2.468h3.836v10.2h4.2v-10.2h3.858v-3.528h-11.9Z"
+                            transform="translate(185.739 -166.895)" fill="currentColor"></path>
+                    </svg></a>
+                <div><a href="/">Главная</a><a href="/solutions">Решения</a><a href="/community">Комьюнити</a></div>
+            </div>
+        </nav>
+        <nav class="css-a6z381-Wrap ewxu9451">
+            <div class="css-11xbvtz-Container10-MobileContainer ewxu9452">
+                <div class="logoGroup" style="display: flex; align-items: center; color: white;"><svg width="32"
+                        height="45.147" viewBox="0 0 43.012 45.147" style="margin-right: 1em;">
+                        <path id="Path_13855" data-name="Path 13855"
+                            d="M-171.689,193.684V169.809l-6.336,2.232-.276.1-.275-.1-6.333-2.232v19.216l6.884,2.427Zm22.321-21.838-5.78-2.037v39.609l5.78-2.04Zm5.771-3.248-4.941-1.7-4.944,1.743,4.939,1.741Zm-29.73.061-4.943-1.742-4.941,1.742,4.941,1.742Zm31.4,1.1-5.78,2.081V206.8l5.812-2.016Zm-22.318,28.89-19,6.719,5.247,1.842,7.442,2.625,6.306,2.2Zm-6.888-3.013-7.441-2.622-6.333-2.2V204.2l19-6.721Zm14.329.389-5.782,2.037v13.975l5.782-2.037Z"
+                            transform="translate(184.91 -166.895)" fill="#fff"></path>
+                    </svg><svg width="190.691" height="30" viewBox="0 0 190.691 30">
+                        <path id="Path_2448" data-name="Path 2448"
+                            d="M98.243,311.729c0,2.973-1.324,4.417-4.094,4.417-3.093,0-4.379-1.445-4.379-4.417V294.221H81.015v17.391c0,7.59,4.056,11.726,12.973,11.726,8.231,0,13.012-3.175,13.012-12.211V294.221H98.243Zm15.934-10.161h7.992v21.246h8.754V301.568h8.036v-7.347H114.177Zm58.581,15.141c-.242-2.528-1.284-6.344-4.176-7.067a7.54,7.54,0,0,0,4.216-6.989c0-6.628-5.743-8.433-10.2-8.433H147.214v28.594h8.675V312.733h3.7c4.094,0,4.617,2.492,4.859,5.785l.12,1.6a8.673,8.673,0,0,0,.52,2.692h8.675a6.726,6.726,0,0,1-.722-3.093Zm-12.047-10H155.89v-5.864h4.336c2.692,0,4.058.965,4.058,2.892C164.285,305.987,162.718,306.71,160.711,306.71ZM190.3,294.221l-10.562,28.594h8.874l1.406-4.054h9.2l1.4,4.054H209.5L198.98,294.221Zm1.6,18.394c.965-2.894,1.566-4.859,1.566-4.859.563-1.769.723-2.41,1.208-4.379a38.247,38.247,0,0,0,1.082,4.336s1,3.253,1.528,4.9Zm35.533,3.493c-3.415,0-5.5-2.93-5.5-7.672,0-3.533,1.368-7.669,5.5-7.669a4.442,4.442,0,0,1,4.617,4.016h8.515c-.4-6.426-5.984-11.285-12.972-11.285-8.675,0-14.5,6.546-14.5,14.938,0,8.476,5.582,15.062,14.34,15.062,6.945,0,12.73-4.058,13.25-11.968H232.06C231.619,314.5,230.013,316.108,227.442,316.108Zm28.8-.563v-4.176H269.9v-6.628H256.244v-3.575h15.063v-6.945h-23.7v28.594h24.095v-7.269Z"
+                            transform="translate(-81.015 -293.498)" fill="#fff"></path>
+                    </svg></div>
+                <div class="hamb" style="display: flex; align-items: center; gap: 8px;"><a
+                        href="https://utracesolutions.com/" target="_blank" class="css-189b56n-OuterLink ewxu9450">Visit
+                        global website</a>
+                    <div class="css-zq29ce-Wrap ev7ydri1">
+                        <div class="css-4itxwp-Bar ev7ydri0"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="css-1w6ko1i-OverlayElement e1lqxigt1"></div>
+        <div class="css-vf31sh-Wrap enw0cz31">
+            <div class="links"><a href="/">Главная</a><a href="/solutions">Решения</a><a href="/community">Комьюнити</a>
+            </div>
+            <div class="separator"></div><a href="https://utracesolutions.com/" target="_blank"
+                class="css-1il9mvb-OuterLink enw0cz30">Visit global website</a>
+            <div>
+                <div class="css-zaqi89-AddressItem eksf5pb0"><svg width="21.25" height="32.5" viewBox="0 0 21.25 32.5">
+                        <path id="Icon_ionic-md-phone-portrait" data-name="Icon ionic-md-phone-portrait"
+                            d="M25.232,2.25H10.768A2.887,2.887,0,0,0,7.875,5.114V30.886a2.887,2.887,0,0,0,2.893,2.864H25.232a2.887,2.887,0,0,0,2.893-2.864V5.114A2.887,2.887,0,0,0,25.232,2.25Zm.362,25.875H10.406V7.875H25.594Z"
+                            transform="translate(-7.375 -1.75)" fill="none" stroke="#f6584b" stroke-width="1"></path>
+                    </svg>
+                    <div>
+                        <p><a href="tel:+74996817686">+7 (499) 681-76-86</a></p>
+                    </div>
+                </div>
+                <div class="css-zaqi89-AddressItem eksf5pb0"><svg width="30.25" height="21.25"
+                        viewBox="0 0 30.25 21.25">
+                        <g id="Icon_ionic-ios-mail" data-name="Icon ionic-ios-mail"
+                            transform="translate(-2.875 -7.375)">
+                            <path id="Path_1687" data-name="Path 1687"
+                                d="M32.386,10.357,24.82,18.063a.136.136,0,0,0,0,.2L30.115,23.9a.912.912,0,0,1,0,1.294.917.917,0,0,1-1.294,0l-5.273-5.618a.144.144,0,0,0-.2,0l-1.287,1.308a5.661,5.661,0,0,1-4.036,1.7,5.775,5.775,0,0,1-4.12-1.751l-1.238-1.259a.144.144,0,0,0-.2,0L7.186,25.193a.917.917,0,0,1-1.294,0,.912.912,0,0,1,0-1.294l5.295-5.639a.15.15,0,0,0,0-.2L3.614,10.357a.139.139,0,0,0-.239.1v15.42a2.257,2.257,0,0,0,2.25,2.25h24.75a2.257,2.257,0,0,0,2.25-2.25V10.455A.141.141,0,0,0,32.386,10.357Z"
+                                fill="none" stroke="#f6584b" stroke-width="1"></path>
+                            <path id="Path_1688" data-name="Path 1688"
+                                d="M18,20.749A3.823,3.823,0,0,0,20.749,19.6L31.781,8.367a2.21,2.21,0,0,0-1.392-.492H5.618a2.2,2.2,0,0,0-1.392.492L15.258,19.6A3.823,3.823,0,0,0,18,20.749Z"
+                                fill="none" stroke="#f6584b" stroke-width="1"></path>
+                        </g>
+                    </svg>
+                    <div>
+                        <p class="nomb"><a href="mailto:marketing@utrace.ru">marketing@utrace.ru</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="button-wrap"><button class="css-1yw7pli-Button efk5zhu1">Написать нам</button></div>
+        </div>
+        <section class="css-1r49qqd-Heading evr9bpq0">
+            <div class="css-1ndgrxy-Container8 e1mzfbp92">
+                <nav class="css-13ap8xg-Wrap e190f06y0">
+                    <ul>
+                        <li><a href="/">Главная</a><span>/</span></li>
+                        <li><a href="/events">Мероприятия</a><span>/</span></li>
+                        <li>Бизнес-семинар «Маркировка в фармацевтической отрасли: от А до Я»</li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="css-im5zg9-Container6 e1mzfbp91">
+                <h1>Бизнес-семинар «Маркировка в фармацевтической отрасли: от А до Я»</h1>
+            </div>
+        </section>
+        <div class="css-im5zg9-Container6 e1mzfbp91">
+            <section class="css-cybq17-NewsContent eiz1ch40">
+                <h2></h2>
+                <div class="css-142kmef-Wrap e45h5s21">
+                    <div class="css-1cd3rmu-Item e45h5s20">
+                        <div class="icon"><svg width="24" height="33.738" viewBox="0 0 24 33.738">
+                                <path id="Icon_material-location-on" data-name="Icon material-location-on"
+                                    d="M18,3A10.492,10.492,0,0,0,7.5,13.5C7.5,21.375,18,33,18,33S28.5,21.375,28.5,13.5A10.492,10.492,0,0,0,18,3Zm0,14.25a3.75,3.75,0,1,1,3.75-3.75A3.751,3.751,0,0,1,18,17.25Z"
+                                    transform="translate(-6 -1.5)" fill="none" stroke="#019ec8" stroke-width="3"></path>
+                            </svg></div>
+                        <div class="location">
+                            <div class="title">Где?</div>
+                            <div class="data">г. Алматы</div>
+                        </div>
+                    </div>
+                    <div class="css-1cd3rmu-Item e45h5s20">
+                        <div class="icon"><svg width="30" height="33" viewBox="0 0 30 33">
+                                <g id="Icon_feather-calendar" data-name="Icon feather-calendar"
+                                    transform="translate(-3 -1.5)">
+                                    <path id="Path_3087" data-name="Path 3087"
+                                        d="M7.5,6h21a3,3,0,0,1,3,3V30a3,3,0,0,1-3,3H7.5a3,3,0,0,1-3-3V9a3,3,0,0,1,3-3Z"
+                                        fill="none" stroke="#f6584b" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="3"></path>
+                                    <path id="Path_3088" data-name="Path 3088" d="M24,3V9" fill="none" stroke="#f6584b"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                    <path id="Path_3089" data-name="Path 3089" d="M12,3V9" fill="none" stroke="#f6584b"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                    <path id="Path_3090" data-name="Path 3090" d="M4.5,15h27" fill="none"
+                                        stroke="#f6584b" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="3"></path>
+                                </g>
+                            </svg></div>
+                        <div class="date">
+                            <div class="title">Когда?</div>
+                            <div class="data">19 ноября</div>
+                        </div>
+                    </div>
+                    <div class="css-1cd3rmu-Item e45h5s20">
+                        <div class="icon"><svg width="33" height="33" viewBox="0 0 33 33">
+                                <g id="Icon_feather-clock" data-name="Icon feather-clock"
+                                    transform="translate(-1.5 -1.5)">
+                                    <path id="Path_3091" data-name="Path 3091"
+                                        d="M33,18A15,15,0,1,1,18,3,15,15,0,0,1,33,18Z" fill="none" stroke="#000"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                    <path id="Path_3092" data-name="Path 3092" d="M18,9v9l6,3" fill="none" stroke="#000"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                </g>
+                            </svg></div>
+                        <div class="time">
+                            <div class="title">Во сколько?</div>
+                            <div class="data">10:00</div>
+                        </div>
+                    </div>
+                    <div class="button"><button class="css-1yw7pli-Button efk5zhu1">Получить материалы</button></div>
+                </div>
+                <figure class="gatsby-resp-image-figure">
+                    <span class="gatsby-resp-image-wrapper"
+                        style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1280px;">
+                        <span class="gatsby-resp-image-background-image"
+                            style="padding-bottom: 66.5625%; position: relative; bottom: 0px; left: 0px; background-image: url(&quot;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFAv/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAFJrcqVomif/8QAGRAAAgMBAAAAAAAAAAAAAAAAAgMAASET/9oACAEBAAEFAljnPLVEqWYtuxMp/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGhAAAgIDAAAAAAAAAAAAAAAAAAERkRBBQv/aAAgBAQAGPwI1ZxZMOxrH/8QAGxAAAgMAAwAAAAAAAAAAAAAAAAERITFhcYH/2gAIAQEAAT8hrY0zaV6DXgzhMuYk7qSjXR//2gAMAwEAAgADAAAAEDDv/8QAFhEBAQEAAAAAAAAAAAAAAAAAARAR/9oACAEDAQE/EEwn/8QAFhEBAQEAAAAAAAAAAAAAAAAAARAh/9oACAECAQE/EBFyf//EABgQAQEBAQEAAAAAAAAAAAAAAAERADEh/9oACAEBAAE/EBFtFKxtkwJep6A8cgLZOsrig3DF03gX3i4zW+Fd/9k=&quot;); background-size: cover; display: block; transition: opacity 0.5s ease 0.5s; opacity: 0;"></span>
+                        <picture>
+                            <source
+                                srcset="./img/ust32w.webp"
+                                sizes="(max-width: 1280px) 100vw, 1280px" type="image/webp">
+                            <source
+                                srcset="./img/ust32w.webp"
+                                sizes="(max-width: 1280px) 100vw, 1280px" type="image/jpeg">
+                            <img class="gatsby-resp-image-image"
+                                src="./img/ust32w.webp"
+                                alt="Serialization Talks CIS" title="Serialization Talks CIS" loading="lazy"
+                                style="width: 100%; height: 100%; margin: 0px; vertical-align: middle; position: absolute; top: 0px; left: 0px; opacity: 1; transition: opacity 0.5s ease 0s; color: inherit; box-shadow: white 0px 0px 0px 400px inset;">
+                        </picture>
+                    </span>
+                    <figcaption class="gatsby-resp-image-figcaption">Serialization Talks CIS</figcaption>
+                </figure>
+                <div class="css-ev5l3e">Бизнес-семинар «Маркировка в фармацевтической отрасли: от А до Я»</div>
+                <p class="css-mo5r9k-PElement eiz1ch41">В этом году в Казахстане завершены пилотные проекты по
+                    обязательной маркировке лекарственных средств в некоторых фармкомпаниях. С 1 июля 2022 года стартует
+                    первая волна обязательной маркировки. В настоящий момент ожидается утверждение методических
+                    рекомендаций по проведению проектов маркировки и прослеживаемости. С одной стороны, неопределенность
+                    вызывает множество вопросов у игроков индустрии, с другой – регуляторные сроки уже определены. Как
+                    правильно поступить бизнесу в таких условиях?</p>
+                <p class="css-mo5r9k-PElement eiz1ch41">Внедрение систем сериализации, определенно, является вызовом для
+                    любого бизнеса. При этом у фармацевтической отрасли есть своя специфика, которую нужно учитывать при
+                    реализации таких проектов. Речь идет, в частности, о большей зарегулированности фармрынка,
+                    разнообразии импортных товаропотоков, большом ассортименте продукции нерезидентов, необходимости
+                    дополнительных интеграций с государственными и глобальными корпоративными системами
+                    заводов-производителей.</p>
+                <p class="css-mo5r9k-PElement eiz1ch41">Приглашаем вас на бизнес-семинар, который 19 ноября 2021 года
+                    проведут для вас компании Accenture и Utrace совместно с экспертами Antares Vision и представителями
+                    ЦРЦЭ. Мы ответим на ключевые вопросы и поделимся опытом компаний, успешно запустивших маркировку
+                    среди крупнейших фармкомпаний в РФ.</p>
+                <p class="css-mo5r9k-PElement eiz1ch41">Главный вопрос, на который будем искать ответ: <strong>как
+                        производителю успешно реализовать проект по маркировке и прослеживаемости товаров?</strong></p>
+                <p class="css-mo5r9k-PElement eiz1ch41"><strong>Что обсудим:</strong></p>
+                <ul class="css-1srlcma-StyledList e9ankbu0">
+                    <li>Последние новости оператора, программу поддержки бизнеса.</li>
+                    <li>Проект по маркировке: какие этапы он включает?</li>
+                    <li>Тонкости выбора оборудования и внедрения систем уровня L1-L3.</li>
+                    <li>Внедрение системы уровня L4: особенности интеграции с системами оператора, производственными и
+                        складскими площадками, учетными системами.</li>
+                </ul>
+                <p class="css-mo5r9k-PElement eiz1ch41">Участие в бизнес-семинаре будет актуально ИТ-директорам,
+                    директорам по логистике, supply-chain менеджерам, а также всем, кого затронул проект по маркировке.
+                </p>
+                <p class="css-mo5r9k-PElement eiz1ch41"><strong>Дата проведения</strong>: 19 ноября 2021 г.</p>
+                <p class="css-mo5r9k-PElement eiz1ch41"><strong>Время проведения</strong>: 10:00 – 15:00. Сбор и
+                    регистрация участников начнется в 9:30.</p>
+                <p class="css-mo5r9k-PElement eiz1ch41"><strong>Место проведения</strong>: г. Алматы, гостиница
+                    «Интерконтиненталь», конференц-зал «Абылайхан»</p>
+                <p class="css-mo5r9k-PElement eiz1ch41">Мероприятие будет проводиться в очном формате, чтобы участники
+                    могли напрямую задать вопросы экспертам и пообщаться с коллегами из отрасли.</p>
+                <p class="css-mo5r9k-PElement eiz1ch41">Участие в мероприятии бесплатное при условии предварительной
+                    регистрации, количество мест ограничено.</p>
+                <p class="css-mo5r9k-PElement eiz1ch41">В случае возникновения вопросов, свяжитесь, пожалуйста, с
+                    <strong>Егором Мязиным, менеджером маркетинговых событий
+                        компании Naviсon: <a href="mailto:emyazin@navicons.ru">emyazin@navicons.ru</a>, телефон <a
+                            href="tel:+7-926-496-23-59">+7 (926) 496-23-59</a>.</strong></p>
+                <div style="clear: both;"></div>
+            </section>
+        </div>
+        <section class="css-1motems-Wrap ew57xv83">
+            <div class="css-1yeukl2"><svg width="239" height="680" viewBox="0 0 83 282">
+                    <g id="Group_299" data-name="Group 299" transform="translate(234.761 -1790.992) rotate(90)"
+                        opacity="0.2">
+                        <rect id="Rectangle_26" data-name="Rectangle 26" width="11" height="82"
+                            transform="translate(1790.992 151.761)" fill="#707070"></rect>
+                        <rect id="Rectangle_27" data-name="Rectangle 27" width="5" height="82"
+                            transform="translate(1807.992 151.761)" fill="#707070"></rect>
+                        <rect id="Rectangle_28" data-name="Rectangle 28" width="20" height="82"
+                            transform="translate(1818.992 151.761)" fill="#707070"></rect>
+                        <rect id="Rectangle_29" data-name="Rectangle 29" width="7.809" height="82.761"
+                            transform="translate(1850.434 152)" fill="#707070"></rect>
+                        <rect id="Rectangle_30" data-name="Rectangle 30" width="7.592" height="82.761"
+                            transform="translate(1869.088 152)" fill="#707070"></rect>
+                        <rect id="Rectangle_31" data-name="Rectangle 31" width="3.037" height="82.761"
+                            transform="translate(1881.235 152)" fill="#707070"></rect>
+                        <rect id="Rectangle_32" data-name="Rectangle 32" width="10" height="82"
+                            transform="translate(1888.992 151.761)" fill="#707070"></rect>
+                        <rect id="Rectangle_33" data-name="Rectangle 33" width="4" height="82"
+                            transform="translate(1905.992 151.761)" fill="#707070"></rect>
+                        <rect id="Rectangle_34" data-name="Rectangle 34" width="19" height="82"
+                            transform="translate(1916.992 151.761)" fill="#707070"></rect>
+                        <rect id="Rectangle_35" data-name="Rectangle 35" width="7.809" height="82.761"
+                            transform="translate(1987.088 152)" fill="#707070"></rect>
+                        <rect id="Rectangle_36" data-name="Rectangle 36" width="7.592" height="82.761"
+                            transform="translate(2005.742 152)" fill="#707070"></rect>
+                        <rect id="Rectangle_37" data-name="Rectangle 37" width="3.037" height="82.761"
+                            transform="translate(2017.889 152)" fill="#707070"></rect>
+                        <rect id="Rectangle_38" data-name="Rectangle 38" width="11" height="82"
+                            transform="translate(2024.992 151.761)" fill="#707070"></rect>
+                        <rect id="Rectangle_39" data-name="Rectangle 39" width="4" height="82"
+                            transform="translate(2042.992 151.761)" fill="#707070"></rect>
+                        <rect id="Rectangle_40" data-name="Rectangle 40" width="20" height="82"
+                            transform="translate(2052.992 151.761)" fill="#707070"></rect>
+                        <rect id="Rectangle_41" data-name="Rectangle 41" width="7.809" height="82.761"
+                            transform="translate(1948.044 152)" fill="#707070"></rect>
+                        <rect id="Rectangle_42" data-name="Rectangle 42" width="7.592" height="82.761"
+                            transform="translate(1966.698 152)" fill="#707070"></rect>
+                        <rect id="Rectangle_43" data-name="Rectangle 43" width="3.037" height="82.761"
+                            transform="translate(1978.845 152)" fill="#707070"></rect>
+                    </g>
+                </svg></div>
+            <div><svg width="245.75" height="828.75" viewBox="0 0 245.75 828.75" preserveAspectRatio="none"
+                    class="css-8aypmn-FooterBarcodeInner e14nfn0z0">
+                    <g id="Group_305" data-name="Group 305" transform="translate(-1790.992 -151.761)"
+                        fill="currentColor">
+                        <rect id="Rectangle_26" data-name="Rectangle 26" width="11" height="826.168"
+                            transform="translate(1790.992 151.761)"></rect>
+                        <rect id="Rectangle_27" data-name="Rectangle 27" width="5" height="826.168"
+                            transform="translate(1807.992 151.761)"></rect>
+                        <rect id="Rectangle_28" data-name="Rectangle 28" width="20" height="826.168"
+                            transform="translate(1818.992 151.761)"></rect>
+                        <rect id="Rectangle_29" data-name="Rectangle 29" width="7.809" height="828.133"
+                            transform="translate(1842.575 152.378)"></rect>
+                        <rect id="Rectangle_30" data-name="Rectangle 30" width="7.592" height="828.133"
+                            transform="translate(1858.771 152.378)"></rect>
+                        <rect id="Rectangle_31" data-name="Rectangle 31" width="3.037" height="828.133"
+                            transform="translate(1869.508 152.378)"></rect>
+                        <rect id="Rectangle_32" data-name="Rectangle 32" width="10" height="826.168"
+                            transform="translate(1875.931 151.761)"></rect>
+                        <rect id="Rectangle_33" data-name="Rectangle 33" width="4" height="826.168"
+                            transform="translate(1890.997 151.761)"></rect>
+                        <rect id="Rectangle_34" data-name="Rectangle 34" width="19" height="826.168"
+                            transform="translate(1899.625 151.761)"></rect>
+                        <rect id="Rectangle_35" data-name="Rectangle 35" width="7.809" height="828.133"
+                            transform="translate(1961.162 152.378)"></rect>
+                        <rect id="Rectangle_36" data-name="Rectangle 36" width="7.592" height="828.133"
+                            transform="translate(1977.373 152.378)"></rect>
+                        <rect id="Rectangle_37" data-name="Rectangle 37" width="3.037" height="828.133"
+                            transform="translate(1981.639 152.378)"></rect>
+                        <rect id="Rectangle_38" data-name="Rectangle 38" width="11" height="826.168"
+                            transform="translate(1988.742 151.761)"></rect>
+                        <rect id="Rectangle_39" data-name="Rectangle 39" width="4" height="826.168"
+                            transform="translate(2006.742 151.761)"></rect>
+                        <rect id="Rectangle_40" data-name="Rectangle 40" width="20" height="826.168"
+                            transform="translate(2016.742 151.761)"></rect>
+                        <rect id="Rectangle_41" data-name="Rectangle 41" width="7.809" height="828.133"
+                            transform="translate(1927.28 152.378)"></rect>
+                        <rect id="Rectangle_42" data-name="Rectangle 42" width="7.592" height="828.133"
+                            transform="translate(1943.487 152.378)"></rect>
+                        <rect id="Rectangle_43" data-name="Rectangle 43" width="3.037" height="828.133"
+                            transform="translate(1954.434 152.378)"></rect>
+                    </g>
+                </svg></div>
+            <div id="contact-form" class="css-c5k24s-Container10-Container eyhll2h0">
+                <div id="footer-left-col">
+                    <div class="css-1llo0pk-LeftColumn ewhvs2g0">
+                        <h2><span>Да,</span><br>я хочу запросить материалы</h2>
+                        <p>Напишите нам, и мы свяжемся с Вами в ближайшее время</p><a class="phone"
+                            href="tel:+74996817686">+7 (499) 681-76-86</a>
+                    </div>
+                </div>
+                <div class="css-1tskug4-Wrap e1nobpov1">
+                    <div class="css-ea5o2b-FormWrap e1nobpov0">
+                        <form><input type="text" name="name" placeholder="Как к вам обращаться?" value=""><input
+                                type="text" name="email" placeholder="Эл. почта" value=""><input type="text"
+                                name="phone" placeholder="Телефон" value=""><input type="text" name="company"
+                                placeholder="Компания" value=""><input type="text" name="job" placeholder="Должность"
+                                value=""><textarea name="question"
+                                placeholder="Вопрос / Комментарий / Пожелание"></textarea>
+                            <div class="submit-area">
+                                <div class="css-8dnaxz-Wrap e197r3852">
+                                    <div class="css-1as1m3u-Box e197r3851"></div><span
+                                        class="css-5lfbyo-Text e197r3850">Даю согласие на обработку персональных
+                                        данных</span>
+                                </div><button disabled="" type="submit"
+                                    class="css-1yw7pli-Button efk5zhu1">Отправить</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="css-1jjojcn-Social e1nobpov2">
+                        <p>Мы <br> в социальных <br> сетях</p><a class="mt-25" href="https://facebook.com/utrace"
+                            aria-label="Наша страничка в Facebook"><svg width="27" height="27" viewBox="0 0 27 27">
+                                <path id="Icon_ionic-logo-facebook" data-name="Icon ionic-logo-facebook"
+                                    d="M30.009,4.5H5.991A1.491,1.491,0,0,0,4.5,5.991V30.009A1.491,1.491,0,0,0,5.991,31.5H18V20.813H14.773V16.875H18V13.964c0-3.488,2.419-5.386,5.534-5.386,1.491,0,3.094.113,3.466.162v3.642H24.518c-1.695,0-2.018.8-2.018,1.983v2.51h4.036l-.527,3.938H22.5V31.5h7.509A1.491,1.491,0,0,0,31.5,30.009V5.991A1.491,1.491,0,0,0,30.009,4.5Z"
+                                    transform="translate(-4.5 -4.5)" fill="#f6584b"></path>
+                            </svg></a><a href="https://youtube.com/channel/UCBsZnvMHN8udqCXsdQJiyKQ"
+                            aria-label="Наша страничка в Youtube"><svg width="27.701" height="20.779"
+                                viewBox="0 0 27.701 20.779">
+                                <path id="Icon_ionic-logo-youtube" data-name="Icon ionic-logo-youtube"
+                                    d="M27.52,9.089a4.206,4.206,0,0,0-4-4.394c-3-.141-6.055-.195-9.177-.195h-.974c-3.117,0-6.179.054-9.177.195a4.215,4.215,0,0,0-4,4.4C.054,11.026-.006,12.952,0,14.878s.054,3.853.184,5.784a4.22,4.22,0,0,0,4,4.41c3.149.146,6.38.211,9.664.206q4.935.016,9.664-.206a4.221,4.221,0,0,0,4-4.41c.13-1.932.189-3.858.184-5.79Q27.715,11.983,27.52,9.089ZM11.2,20.187V9.554l7.846,5.314Z"
+                                    transform="translate(0 -4.5)" fill="#f6584b"></path>
+                            </svg></a><a href="https://ru.linkedin.com/company/utrace"
+                            aria-label="Наша страничка в LinkedIn"><svg width="26.993" height="26.993"
+                                viewBox="0 0 26.993 26.993">
+                                <path id="Icon_ionic-logo-linkedin" data-name="Icon ionic-logo-linkedin"
+                                    d="M29.334,4.5H6.806A2.2,2.2,0,0,0,4.5,6.6V29.18a2.375,2.375,0,0,0,2.306,2.313H29.327a2.255,2.255,0,0,0,2.166-2.313V6.6A2.07,2.07,0,0,0,29.334,4.5ZM12.867,27H9V14.977h3.867Zm-1.8-13.852h-.028A1.985,1.985,0,0,1,9,11.074,2,2,0,0,1,11.088,9a1.992,1.992,0,0,1,2.067,2.074A2,2,0,0,1,11.067,13.148ZM27,27H23.133V20.426c0-1.575-.562-2.651-1.962-2.651A2.116,2.116,0,0,0,19.188,19.2a2.6,2.6,0,0,0-.134.949V27H15.187V14.977h3.867V16.65A3.915,3.915,0,0,1,22.542,14.7C25.08,14.7,27,16.369,27,19.976V27Z"
+                                    transform="translate(-4.5 -4.5)" fill="#f6584b"></path>
+                            </svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="css-gnthzd-Bg ew57xv82"></div>
+            <div class="css-vvgd83-Bottom ew57xv80">
+                <div class="css-kk5ovs-Social ew57xv81"><a href="https://facebook.com/utrace"
+                        aria-label="Наша страничка в Facebook"><svg width="27" height="27" viewBox="0 0 27 27">
+                            <path id="Icon_ionic-logo-facebook" data-name="Icon ionic-logo-facebook"
+                                d="M30.009,4.5H5.991A1.491,1.491,0,0,0,4.5,5.991V30.009A1.491,1.491,0,0,0,5.991,31.5H18V20.813H14.773V16.875H18V13.964c0-3.488,2.419-5.386,5.534-5.386,1.491,0,3.094.113,3.466.162v3.642H24.518c-1.695,0-2.018.8-2.018,1.983v2.51h4.036l-.527,3.938H22.5V31.5h7.509A1.491,1.491,0,0,0,31.5,30.009V5.991A1.491,1.491,0,0,0,30.009,4.5Z"
+                                transform="translate(-4.5 -4.5)" fill="#f6584b"></path>
+                        </svg></a><a href="https://youtube.com/channel/UCBsZnvMHN8udqCXsdQJiyKQ"
+                        aria-label="Наша страничка в Youtube"><svg width="27.701" height="20.779"
+                            viewBox="0 0 27.701 20.779">
+                            <path id="Icon_ionic-logo-youtube" data-name="Icon ionic-logo-youtube"
+                                d="M27.52,9.089a4.206,4.206,0,0,0-4-4.394c-3-.141-6.055-.195-9.177-.195h-.974c-3.117,0-6.179.054-9.177.195a4.215,4.215,0,0,0-4,4.4C.054,11.026-.006,12.952,0,14.878s.054,3.853.184,5.784a4.22,4.22,0,0,0,4,4.41c3.149.146,6.38.211,9.664.206q4.935.016,9.664-.206a4.221,4.221,0,0,0,4-4.41c.13-1.932.189-3.858.184-5.79Q27.715,11.983,27.52,9.089ZM11.2,20.187V9.554l7.846,5.314Z"
+                                transform="translate(0 -4.5)" fill="#f6584b"></path>
+                        </svg></a><a href="https://ru.linkedin.com/company/utrace"
+                        aria-label="Наша страничка в LinkedIn"><svg width="26.993" height="26.993"
+                            viewBox="0 0 26.993 26.993">
+                            <path id="Icon_ionic-logo-linkedin" data-name="Icon ionic-logo-linkedin"
+                                d="M29.334,4.5H6.806A2.2,2.2,0,0,0,4.5,6.6V29.18a2.375,2.375,0,0,0,2.306,2.313H29.327a2.255,2.255,0,0,0,2.166-2.313V6.6A2.07,2.07,0,0,0,29.334,4.5ZM12.867,27H9V14.977h3.867Zm-1.8-13.852h-.028A1.985,1.985,0,0,1,9,11.074,2,2,0,0,1,11.088,9a1.992,1.992,0,0,1,2.067,2.074A2,2,0,0,1,11.067,13.148ZM27,27H23.133V20.426c0-1.575-.562-2.651-1.962-2.651A2.116,2.116,0,0,0,19.188,19.2a2.6,2.6,0,0,0-.134.949V27H15.187V14.977h3.867V16.65A3.915,3.915,0,0,1,22.542,14.7C25.08,14.7,27,16.369,27,19.976V27Z"
+                                transform="translate(-4.5 -4.5)" fill="#f6584b"></path>
+                        </svg></a></div>© 2021 Utrace. All rights reserved.
+            </div>
+        </section>
+        <div class="css-1uvifso-OverlayElement e1lqxigt1">
+            <div class="inner"></div>
+        </div>
+    </div>
+</body>
