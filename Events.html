@@ -359,19 +359,22 @@
                 </div>
                 <div class="css-1tskug4-Wrap e1nobpov1">
                     <div class="css-ea5o2b-FormWrap e1nobpov0">
-                        <form><input type="text" name="name" placeholder="Как к вам обращаться?" value=""><input
-                                type="text" name="email" placeholder="Эл. почта" value=""><input type="text"
-                                name="phone" placeholder="Телефон" value=""><input type="text" name="company"
-                                placeholder="Компания" value=""><input type="text" name="job" placeholder="Должность"
-                                value=""><textarea name="question"
-                                placeholder="Вопрос / Комментарий / Пожелание"></textarea>
+                        <form class="forma" name="forma">
+                            <input required minlength="2" maxlength="20" pattern="^[А-Яа-яЁёA-Za-z]+[\s\-]?[А-Яа-яЁёA-Za-z]+$" class="forma__input" type="text" name="name" placeholder="Как к вам обращаться?" value="" />
+                            <input required pattern="^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+\.+[a-zA-Z]{2,}$" class="forma__input" type="text" name="email" placeholder="Эл. почта" value="" />
+                            <input required class="forma__input" type="text" pattern="[0-9.]+" name="phone" placeholder="Телефон" value="" />
+                            <textarea name="question" placeholder="Вопрос / Комментарий / Пожелание"></textarea>
+
                             <div class="submit-area">
                                 <div class="css-8dnaxz-Wrap e197r3852">
-                                    <div class="css-1as1m3u-Box e197r3851"></div><span
-                                        class="css-5lfbyo-Text e197r3850">Даю согласие на обработку персональных
-                                        данных</span>
-                                </div><button disabled="" type="submit"
-                                    class="css-1yw7pli-Button efk5zhu1">Отправить</button>
+                                    <label class="forma__label">
+                                        <input class="forma__input forma__checkbox" type="checkbox" name="carcheck" checked required />
+                                        <div class="css-1pru3ay-Box e197r3851 forma__checkbox_border"></div>
+                                    </label>
+                                    <span class="css-5lfbyo-Text e197r3850">Даю согласие на обработку персональных данных</span>
+                                </div>
+                                <button type="submit" class="forma__button css-1yw7pli-Button efk5zhu1">Отправить</button>
+                                
                             </div>
                         </form>
                     </div>
