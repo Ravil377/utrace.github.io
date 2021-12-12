@@ -689,12 +689,10 @@ body {
     top: 0;
     bottom: 0;
     right: 0;
-    -webkit-transform: skewY(
--3deg);
+    -webkit-transform: skewY(-3deg);
     -moz-transform: skewY(-3deg);
     -ms-transform: skewY(-3deg);
-    transform: skewY(
--3deg);
+    transform: skewY(-3deg);
 }
 .css-2lh0vd-CardElement .e7q0d651 {
     color: white;
@@ -767,7 +765,7 @@ body {
 .css-nams48-Wrap .carousel__dot-group {
     position: relative;
     z-index: 2;
-    margin-top: -3vw;
+    margin-top: 6vw;
     padding: 0 1rem clamp(10px, 2.083333333333333vw, 40px) 1rem;
     display: -webkit-box;
     display: -webkit-flex;
@@ -780,6 +778,17 @@ body {
     -ms-flex-pack: center;
     -webkit-justify-content: center;
     justify-content: center;
+}
+@media (min-width: 768px){
+    .css-nams48-Wrap .carousel__dot-group {
+        margin-top: 4vw;
+    }
+}
+
+@media (min-width: 768px){
+    .css-nams48-Wrap .carousel__dot-group {
+        margin-top: 2vw;
+    }
 }
 .css-nams48-Wrap .carousel__dot {
     -webkit-transition: all 0.25s ease-out;
@@ -1346,7 +1355,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     max-width: 1920px;
-    display: grid;
+    
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 30px;
     -webkit-align-items: center;
@@ -1355,6 +1364,11 @@ body {
     align-items: center;
     padding-left: 1rem;
     padding-right: 1rem;
+}
+@media (min-width: 768px){
+    .css-eukaud-Container {
+        display: grid;
+    }
 }
 .css-eukaud-Container .col1 {
     grid-area: 1/2/2/6;
@@ -1895,6 +1909,31 @@ body {
         display: none;
     }
 }
+.partners__wrapper {
+    padding-bottom: 41.4819%;
+}
+
+@media (min-width: 450px){
+    .partners__wrapper {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+
+@media (min-width: 768px){
+    .partners__wrapper {
+        margin-bottom: 150px;
+    }
+}
+
+@media (min-width: 998px){
+    .partners__wrapper {
+        margin-bottom: 20px;
+    }
+}
+
+
+
 .css-jwepol-Wrap {
     display: inline-block;
     position: relative;
@@ -3282,6 +3321,12 @@ strong{
     flex-direction: row;
     -webkit-box-pack: center;
     justify-content: center;
+    margin-top: 30px;
+}
+@media (min-width: 1220px){
+    .css-1ofbin2-Wrap {
+        margin-top: 0;
+    }
 }
 .css-1ofbin2-Wrap .carousel__dot {
     transition: all 0.25s ease-out 0s;
@@ -5356,7 +5401,7 @@ strong{
 .pack__item {
     position: relative;
     background-color: #373962;
-    padding-bottom: 90%;
+    padding-bottom: 129%;
     /* max-width: 480px; */
     width: 100%;
 }
