@@ -4931,6 +4931,10 @@ strong{
     position: relative;
 }
 
+.burger-menu__item_active a {
+    color: rgb(134, 138, 220);
+}
+
 .burger-menu__item_active::before {
     content: "";
     position: absolute;
