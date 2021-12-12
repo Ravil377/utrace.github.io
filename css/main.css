@@ -1934,7 +1934,7 @@ body {
     display: grid;
     gap: 30px;
     margin: 0px auto;
-    max-width: 1920px;
+    max-width: 1330px;
     /* grid-template-columns: 1fr minmax(50px, 1fr) repeat(10, 1fr); */
 }
 .css-1ixinyp-Container .content {
