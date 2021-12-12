@@ -5143,15 +5143,18 @@ strong{
     opacity: 1;
 }
 
-/* = стилизуем текст */
 .forma__label {
+    position: relative;
     display: flex;
 }
 .forma__checkbox {
+    position: absolute;
     display: none;
 }
 
-
+.forma__checkbox_border {
+    border: 1px solid black;
+}
 
 .css-1qwgrea-OverlayElement {
     display: none;
