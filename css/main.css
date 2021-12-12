@@ -1903,6 +1903,7 @@ body {
     max-width: 100%;
 }
 .css-1s7t808-SelectEl {
+    display: block;
     font-size: inherit;
     border: 1px solid rgb(246, 88, 75);
     border-radius: 4px;
@@ -1913,6 +1914,15 @@ body {
     max-width: 100%;
     width: 250px;
     position: relative;
+}
+.news__desk {
+    display: none;
+}
+
+@media (min-width: 768px){
+    .news__desk {
+        display: block;
+    }
 }
 .css-palei1-List {
     position: absolute;
