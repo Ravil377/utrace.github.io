@@ -660,7 +660,7 @@ body {
     margin: 0;
     list-style-type: none;
 }
-.slideInner___2mfX9 {
+.slideInner___2mfX9_1 {
     position: absolute;
     top: 0;
     left: 0;
@@ -4985,7 +4985,7 @@ strong{
     backdrop-filter: blur(10px);
 }
 
-.swiper-pagination__project .swiper-pagination-bullet,
+.swiper-pagination__project1 .swiper-pagination-bullet,
 .swiper-pagination__events .swiper-pagination-bullet,
 .swiper-pagination__partners .swiper-pagination-bullet {
     -webkit-transition: all 0.25s ease-out;
@@ -5013,7 +5013,7 @@ strong{
     cursor: pointer;
 }
 
-.swiper-pagination__project .swiper-pagination-bullet-active,
+.swiper-pagination__project1 .swiper-pagination-bullet-active,
 .swiper-pagination__events .swiper-pagination-bullet-active,
 .swiper-pagination__partners .swiper-pagination-bullet-active {
     background-color: #373962;
@@ -5417,4 +5417,8 @@ strong{
     border: 3px solid #F6584B;
     margin: 0 min(1rem, 1vw);
     cursor: pointer;
+}
+
+.swiper-wrapper__projects1 {
+    margin-bottom: 40px;
 }
