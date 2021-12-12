@@ -1553,7 +1553,7 @@ body {
     left: calc(100% - 32px);
 }
 .css-1wleukp-GridContainer-HighlightWrap .photo {
-    background-color: red;
+    /* background-color: red; */
 }
 .css-1wleukp-GridContainer-HighlightWrap .photo-wrap .photo {
     position: absolute;
@@ -1885,9 +1885,15 @@ body {
     font-size: 70px;
 }
 .css-1arl8t3-Filters {
+    display: block;
     margin: 1rem;
     position: relative;
     text-align: center;
+}
+@media (min-width: 768px){
+    .css-1arl8t3-Filters {
+        display: none;
+    }
 }
 .css-jwepol-Wrap {
     display: inline-block;
