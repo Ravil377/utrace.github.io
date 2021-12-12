@@ -4984,6 +4984,26 @@ strong{
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
+.swiper-pagination__solution {
+    bottom: 0;
+}
+
+.swiper-pagination__solution .swiper-pagination-bullet {
+    -webkit-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+    width: clamp(15px, 3vw, 21px);
+    height: clamp(15px, 3vw, 21px);
+    background-color: #F6584B;
+    margin: 0 min(0.25rem, 0.25vw);
+    border-radius: 0;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.swiper-pagination__solution .swiper-pagination-bullet-active {
+    background-color: #373962;
+    border: 3px solid #373962;
+}
 
 .swiper-pagination__project1 .swiper-pagination-bullet,
 .swiper-pagination__events .swiper-pagination-bullet,
@@ -5038,9 +5058,11 @@ strong{
 }
 
 .slidermobile-wrapper__solution {
+    position: relative;
     max-width: 350px;
     width: 100%;
     margin-top: 40px;
+    padding-bottom: 70px;
     overflow: hidden;
 }
 
