@@ -1865,13 +1865,13 @@
                             <h2>Обратная связь</h2>
                             <p>Напишите нам, и мы свяжемся с Вами в ближайшее время</p>
                         </div>
+                        <div></div>
                         <div class="css-awscog-FormWrap e1nobpov0">
                             <form class="forma" name="forma">
                                 <input required minlength="2" maxlength="20" pattern="^[А-Яа-яЁёA-Za-z]+[\s\-]?[А-Яа-яЁёA-Za-z]+$" class="forma__input" type="text" name="name" placeholder="Как к вам обращаться?" value="" />
                                 <input required pattern="^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+\.+[a-zA-Z]{2,}$" class="forma__input" type="text" name="email" placeholder="Эл. почта" value="" />
                                 <input required class="forma__input" type="text" pattern="[0-9.]+" name="phone" placeholder="Телефон" value="" />
                                 <textarea name="question" placeholder="Вопрос / Комментарий / Пожелание"></textarea>
-
                                 <div class="submit-area">
                                     <div class="css-8dnaxz-Wrap e197r3852">
                                         <label class="forma__label">
@@ -1962,6 +1962,9 @@
                             slidesPerView: 3,
                         },
                     },
+                    autoplay: {
+                        delay: 5000,
+                    },
                 });
                 const swiperProjects1 = new Swiper(".swiper__projects1", {
                     slidesPerView: 'auto',
@@ -1969,6 +1972,9 @@
                     pagination: {
                         el: ".swiper-pagination__project1",
                         clickable: true,
+                    },
+                    autoplay: {
+                        delay: 5000,
                     },
                 });
 
@@ -1978,6 +1984,9 @@
                     pagination: {
                         el: ".swiper-pagination__partners",
                         clickable: true,
+                    },
+                    autoplay: {
+                        delay: 5000,
                     },
                 });
             </script>
