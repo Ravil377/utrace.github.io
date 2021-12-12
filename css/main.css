@@ -4984,6 +4984,7 @@ strong{
 }
 
 .swiper-pagination__project .swiper-pagination-bullet,
+.swiper-pagination__events .swiper-pagination-bullet,
 .swiper-pagination__partners .swiper-pagination-bullet {
     -webkit-transition: all 0.25s ease-out;
     transition: all 0.25s ease-out;
@@ -4997,7 +4998,21 @@ strong{
     cursor: pointer;
 }
 
+.swiper-pagination__events .swiper-pagination-bullet {
+    -webkit-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+    width: clamp(15px, 3vw, 21px);
+    height: clamp(15px, 3vw, 21px);
+    border: 2px solid #f6f6f6;
+    background-color: #F6584B;
+    margin: 0 min(0.25rem, 0.25vw);
+    border-radius: 0;
+    opacity: 1;
+    cursor: pointer;
+}
+
 .swiper-pagination__project .swiper-pagination-bullet-active,
+.swiper-pagination__events .swiper-pagination-bullet-active,
 .swiper-pagination__partners .swiper-pagination-bullet-active {
     background-color: #373962;
     border: 3px solid #373962;
@@ -5030,6 +5045,8 @@ strong{
     width: 100%;
     min-height: 120px;
     padding: 0.66em 1.11em;
+    display: flex;
+    align-items: center;
 }
 
 .solution__card p {
@@ -5186,8 +5203,9 @@ strong{
 
 .events__item {
     position: relative;
-    max-width: 352px;
+    min-height: 352px;
     /* max-width: 352px;
+    max-width: 352px;
     min-height: 352px;
     width: 100px; */
     font-size: 19px;
@@ -5197,8 +5215,10 @@ strong{
     color: white;
     font-weight: 700; 
 }
-.events__item_fiolet {
 
+
+.events__item_red {
+    background-color: #F6584B;
 }
 .events__item-img {
     width: 100%;
