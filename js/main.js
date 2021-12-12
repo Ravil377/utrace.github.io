@@ -145,7 +145,7 @@ if(document.querySelector('.forma')) {
     const thanksPopup = document.querySelector('.css-1qwgrea-OverlayElement');
 }
 
-if(document.querySelector('.years')) {
+if(document.querySelector('.news__tabs')) {
     const News = document.querySelectorAll('.js-news');
     const newsContainer = document.querySelector('.js-news-content');
     News.forEach((newsItem, idx) => {
