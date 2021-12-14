@@ -5371,7 +5371,11 @@ strong{
     color: white;
     font-weight: 700; 
 }
-
+@media (min-width: 1441px) {
+    .events__item {
+        min-height: 435px;
+    }
+}
 
 .events__item_red {
     background-color: #F6584B;
