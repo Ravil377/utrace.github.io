@@ -342,14 +342,14 @@
                         <div class="horizontalSlider___281Ls carousel__slider carousel__slider--horizontal" aria-live="polite" tabindex="0" role="listbox">
                             <div class="swiper-pack carousel__slider-tray-wrapper carousel__slider-tray-wrap--horizontal">
                                 <ul class="swiper-wrapper sliderTray___-vHFQ sliderAnimation___300FY">
-                                    <li class="swiper-slide pack__item slide___3-Nqo slideHorizontal___1NzNV">
+                                    <li data-slideid="1" class="swiper-slide pack__item slide___3-Nqo slideHorizontal___1NzNV">
                                         <div class="slideInner___2mfX9_1 carousel__inner-slide pack__item-content">
                                             <p class="pack__item-top">флагманское решение №1</p>
                                             <h2 class="pack__item-title">Utrace Hub</h2>
                                             <h3 class="pack__item-subtitle">20% национального оборота сериализованной продукции проходит через Utrace HUB</h3>
                                         </div>
                                     </li>
-                                    <li class="swiper-slide pack__item pack__item_white slide___3-Nqo slideHorizontal___1NzNV">
+                                    <li data-slideid="2" class="swiper-slide pack__item pack__item_white slide___3-Nqo slideHorizontal___1NzNV">
                                         <div class="slideInner___2mfX9_1 carousel__inner-slide pack__item-content">
                                             <p class="pack__item-top pack__item-top_blue">#2</p>
                                             <h2 class="pack__item-title pack__item-title_blue">Utrace Goods</h2>
@@ -358,7 +358,7 @@
                                             </h3>
                                         </div>
                                     </li>
-                                    <li class="swiper-slide pack__item pack__item_red slide___3-Nqo slideHorizontal___1NzNV">
+                                    <li data-slideid="3" class="swiper-slide pack__item pack__item_red slide___3-Nqo slideHorizontal___1NzNV">
                                         <div class="pack__item-qr">
                                             <svg width="221px" height="108px" viewBox="0 0 282 140">
                                                 <g id="Group_13" transform="translate(-1790.992 -151.8)" opacity="0.5">
@@ -389,21 +389,21 @@
                                             <h3 class="pack__item-subtitle">Аналитическая платформа для принятия data-driven решений, основанных на данных МДЛП</h3>
                                         </div>
                                     </li>
-                                    <li class="swiper-slide pack__item slide___3-Nqo slideHorizontal___1NzNV">
+                                    <li data-slideid="4" class="swiper-slide pack__item slide___3-Nqo slideHorizontal___1NzNV">
                                         <div class="slideInner___2mfX9_1 carousel__inner-slide pack__item-content">
                                             <p class="pack__item-top">#4</p>
                                             <h2 class="pack__item-title">Utrace Proxy</h2>
                                             <h3 class="pack__item-subtitle">Надежный и масштабируемый сервис генерации серийных номеров и доставки криптокодов для распределенных заводов фармацевтического холдинга</h3>
                                         </div>
                                     </li>
-                                    <li class="swiper-slide pack__item pack__item_white slide___3-Nqo slideHorizontal___1NzNV">
+                                    <li data-slideid="5" class="swiper-slide pack__item pack__item_white slide___3-Nqo slideHorizontal___1NzNV">
                                         <div class="slideInner___2mfX9_1 carousel__inner-slide pack__item-content">
                                             <p class="pack__item-top pack__item-top_blue">#5</p>
                                             <h2 class="pack__item-title pack__item-title_blue">Utrace Warehouse Manager</h2>
                                             <h3 class="pack__item-subtitle pack__item-subtitle_blue">Легкое решение для небольших складов уровня L3, обеспечивающее управление складскими процессами без WMS систем</h3>
                                         </div>
                                     </li>
-                                    <li class="swiper-slide pack__item pack__item_red slide___3-Nqo slideHorizontal___1NzNV">
+                                    <li data-slideid="6" class="swiper-slide pack__item pack__item_red slide___3-Nqo slideHorizontal___1NzNV">
                                         <div class="pack__item-qr">
                                             <svg width="221px" height="108px" viewBox="0 0 282 140">
                                                 <g id="Group_13" transform="translate(-1790.992 -151.8)" opacity="0.5">
@@ -437,7 +437,7 @@
                                             <h3 class="pack__item-subtitle">Легкий способ взаимодействия с конечным потребителем для прямого вовлечения в программы лояльности через мобильное приложение</h3>
                                         </div>
                                     </li>
-                                    <li class="swiper-slide pack__item slide___3-Nqo slideHorizontal___1NzNV">
+                                    <li data-slideid="7" class="swiper-slide pack__item slide___3-Nqo slideHorizontal___1NzNV">
                                         <div class="slideInner___2mfX9_1 carousel__inner-slide pack__item-content">
                                             <p class="pack__item-top">#7</p>
                                             <h2 class="pack__item-title">Utrace Data governance serviсe</h2>
@@ -1950,9 +1950,15 @@
                 const swiperPack = new Swiper(".swiper-pack", {
                     slidesPerView: 1,
                     slideToClickedSlide: true,
+                    centeredSlides: true,
+                    centeredSlidesBounds: true,
+                    
                     pagination: {
                         el: ".swiper-pagination__pack",
                         clickable: true,
+                        renderBullet: function (index, className) {
+                            return '<span data-dotid="' + (index + 1) + '" class="' + className + '">' + '</span>';
+                        }
                     },
                     breakpoints: {
                         640: {

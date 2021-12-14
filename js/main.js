@@ -174,3 +174,56 @@ if(document.querySelector('.news__tabs')) {
         })
     });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const swiperPack = document.querySelector('.swiper-pack');
+    const swiperPackDotContainer = document.querySelector('.swiper-pagination__pack');
+    const swiperPackDot = swiperPackDotContainer.querySelectorAll('.swiper-pagination-bullet');
+    const swiperSlide = swiperPack.querySelectorAll('.swiper-slide');
+
+function elementInViewport2(el) {
+    var top = el.offsetTop;
+    var left = el.offsetLeft;
+    var width = el.offsetWidth;
+    var height = el.offsetHeight;
+  
+    while(el.offsetParent) {
+      el = el.offsetParent;
+      top += el.offsetTop;
+      left += el.offsetLeft;
+    }
+  
+    return (
+      top < (window.pageYOffset + window.innerHeight) &&
+      left < (window.pageXOffset + window.innerWidth) &&
+      (top + height) > window.pageYOffset &&
+      (left + width) > window.pageXOffset
+    );
+  }
+
+const handler = () => {
+    swiperSlide.forEach(slide => {
+        if(elementInViewport2(slide)) {
+            console.log(elementInViewport2(slide) && slide.dataset.slideid);
+            
+            document.querySelector(`[data-dotid="${slide.dataset.slideid}"]`).classList.add('swiper-pagination-bullet-active');
+        } 
+    });
+};
+
+const mutationObserver = new MutationObserver(function() {
+    // console.log(mutationObserver);
+    handler();
+});
+
+mutationObserver.observe(swiperPack, {
+    attributes: true,
+    characterData: true,
+    childList: true,
+    subtree: true,
+    attributeOldValue: true,
+    characterDataOldValue: true
+  });
+
+ }, false);
+
