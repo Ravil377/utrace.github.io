@@ -209,7 +209,9 @@ document.addEventListener(
             resetDot();
             swiperSlide.forEach((slide) => {
                 if (Visible(slide, containerSlider)) {
-                    document.querySelector(`[data-dotid="${slide.dataset.slideid}"]`).classList.add("swiper-pagination-bullet-active");
+                    let el = document.querySelector(`[data-dotid="${slide.dataset.slideid}"]`);
+                    el.setAttribute('aria-current', 'true');
+                    el.classList.add("swiper-pagination-bullet-active");
                 }
             });
         };
@@ -229,6 +231,11 @@ document.addEventListener(
         });
 
 
+        swiperPackDotContainer.addEventListener('click', (e) => {
+            if(e.target.classList.contains('swiper-pagination-bullet-active')) {
+                e.stopPropagation();
+            };
+        })        
 
     },
     false
