@@ -209,6 +209,7 @@ document.addEventListener(
             }
         };
         const resetDot = () => {
+            
             swiperSlide.forEach((slide) => {
                 swiperPackDotContainer.querySelector(`[data-dotid="${slide.dataset.slideid}"]`).classList.remove("swiper-pagination-bullet-active");
             });
