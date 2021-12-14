@@ -5098,6 +5098,21 @@ strong{
     cursor: pointer;
 }
 
+.swiper-pagination-bullet-active {
+    position: relative;
+    z-index: -1;
+}
+
+/* .swiper-pagination-bullet-active::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+} */
+
 .swiper-pagination__project1 .swiper-pagination-bullet-active,
 .swiper-pagination__events .swiper-pagination-bullet-active,
 .swiper-pagination__partners .swiper-pagination-bullet-active {
