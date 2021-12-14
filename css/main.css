@@ -5378,6 +5378,7 @@ strong{
 @media (min-width: 1441px) {
     .events__item {
         min-height: 435px;
+        height: auto;
     }
 }
 
