@@ -477,9 +477,23 @@
                         </div>
                     </div>
                     
-                    <div class="carousel__dot-group">
-                        <div class="swiper-pagination swiper-pagination-dots swiper-pagination__events"></div>
-                    </div>
+                        <div class="carousel__dot-group carousel__dot-group1">
+                            <button id="0" data-dotid="0" type="button" class="swiper-pagination-bullet dot___3c3SI carousel__dot carousel__dot--0"><span></span></button>
+                            <button id="1" data-dotid="1" type="button" class="swiper-pagination-bullet dot___3c3SI carousel__dot carousel__dot--1"><span></span></button>
+                            <button id="2" data-dotid="2" type="button" class="swiper-pagination-bullet dot___3c3SI carousel__dot carousel__dot--2"><span></span></button>
+                            <button id="3" data-dotid="3" type="button" class="swiper-pagination-bullet dot___3c3SI carousel__dot carousel__dot--3"><span></span></button>
+                            <button id="4" data-dotid="4" type="button" class="swiper-pagination-bullet dot___3c3SI carousel__dot carousel__dot--4"><span></span></button>
+                            <button id="5" data-dotid="5" type="button" class="swiper-pagination-bullet dot___3c3SI carousel__dot carousel__dot--5"><span></span></button>
+                            <button id="6" data-dotid="6" type="button" class="swiper-pagination-bullet dot___3c3SI carousel__dot carousel__dot--6"><span></span></button>
+                            <button id="7" data-dotid="7" type="button" class="swiper-pagination-bullet dot___3c3SI carousel__dot carousel__dot--0"><span></span></button>
+                            <button id="8" data-dotid="8" type="button" class="swiper-pagination-bullet dot___3c3SI carousel__dot carousel__dot--1"><span></span></button>
+                            <button id="9" data-dotid="9" type="button" class="swiper-pagination-bullet dot___3c3SI carousel__dot carousel__dot--2"><span></span></button>
+                            <button id="10" data-dotid="10" type="button" class="swiper-pagination-bullet dot___3c3SI carousel__dot carousel__dot--3"><span></span></button>
+                            <button id="11" data-dotid="11" type="button" class="swiper-pagination-bullet dot___3c3SI carousel__dot carousel__dot--4"><span></span></button>
+                            <button id="12" data-dotid="12" type="button" class="swiper-pagination-bullet dot___3c3SI carousel__dot carousel__dot--5"><span></span></button>
+                            <button id="13" data-dotid="13" type="button" class="swiper-pagination-bullet dot___3c3SI carousel__dot carousel__dot--6"><span></span></button>
+                            <button id="14" data-dotid="14" type="button" class="swiper-pagination-bullet dot___3c3SI carousel__dot carousel__dot--6"><span></span></button>
+                        </div>
                 </div>
             </div>
             <section class="css-1motems-Wrap ew57xv83">
@@ -632,15 +646,6 @@
             const swiperEvents = new Swiper(".swiper__events", {
                 slidesPerView: 1,
                 slideToClickedSlide: true,
-                centeredSlides: true,
-                centeredSlidesBounds: true,
-                pagination: {
-                    el: ".swiper-pagination__events",
-                    clickable: true,
-                    renderBullet: function (index, className) {
-                            return '<span data-dotid="' + (index + 1) + '" class="' + className + '">' + '</span>';
-                    }
-                },
                 autoplay: {
                     delay: 5000,
                 },
@@ -659,9 +664,14 @@
                     }
                 }
             });
-            swiperEvents.on('click', () => {
-                console.log('ff');
-            })
+            const containerDots = document.querySelector('.carousel__dot-group1');
+                const dots = containerDots.querySelectorAll('.carousel__dot');
+        
+                dots.forEach(slide => {
+                    slide.addEventListener('click', (e) => {
+                        swiperEvents.slideTo(e.target.id);
+                    });
+                })
         </script>
     </body>
 </html>

@@ -5124,7 +5124,7 @@ strong{
     border: 3px solid #373962;
 }
 
-.swiper-pagination__pack .swiper-pagination-bullet {
+.carousel__dot-group .swiper-pagination-bullet {
     -webkit-transition: all 0.25s ease-out;
     transition: all 0.25s ease-out;
     width: clamp(15px, 3vw, 21px);
@@ -5137,7 +5137,7 @@ strong{
     cursor: pointer;
 }
 
-.swiper-pagination__pack .swiper-pagination-bullet-active {
+.carousel__dot-group .swiper-pagination-bullet-active {
     background-color: #F6584B;
 }
 
@@ -5558,7 +5558,9 @@ strong{
     fill: white;
 }
 
-.swiper-pagination__pack .swiper-pagination-bullet {
+
+
+.carousel__dot-group .swiper-pagination-bullet {
     -webkit-transition: all 0.25s ease-out;
     transition: all 0.25s ease-out;
     width: clamp(15px, 3vw, 21px);

@@ -173,7 +173,8 @@ document.addEventListener(
         }
 
         const swiperPack = document.querySelector(".swiper-dots");
-        const swiperPackDotContainer = document.querySelector(".swiper-pagination-dots");
+        const swiperPackDotContainer = document.querySelector(".carousel__dot-group1");
+        const dots = swiperPackDotContainer.querySelectorAll('.swiper-pagination-bullet');
         const swiperSlide = swiperPack.querySelectorAll(".swiper-slide");
         const containerSlider = document.querySelector('.carousel');
 
@@ -200,8 +201,9 @@ document.addEventListener(
             }
         };
         const resetDot = () => {
-            swiperSlide.forEach((slide) => {
-                swiperPackDotContainer.querySelector(`[data-dotid="${slide.dataset.slideid}"]`).classList.remove("swiper-pagination-bullet-active");
+            dots.forEach((dot) => {
+                dot.removeAttribute('disabled');
+                dot.classList.remove("swiper-pagination-bullet-active");
             });
         };
 
@@ -209,8 +211,8 @@ document.addEventListener(
             resetDot();
             swiperSlide.forEach((slide) => {
                 if (Visible(slide, containerSlider)) {
-                    let el = document.querySelector(`[data-dotid="${slide.dataset.slideid}"]`);
-                    el.setAttribute('aria-current', 'true');
+                    let el = document.querySelector(`[data-dotid="${(slide.dataset.slideid-1)}"]`);
+                    el.setAttribute('disabled', 'true');
                     el.classList.add("swiper-pagination-bullet-active");
                 }
             });
